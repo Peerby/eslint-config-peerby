@@ -1,10 +1,16 @@
 module.exports = {
-    'extends': 'airbnb-base/legacy',
-    'globals': {
+    extends: 'airbnb-base/legacy',
+    env: {
+        browser: true,
+        mocha: true,
+        mongo: true,
+        node: true,
     },
-    'settings': {
+    globals: {
     },
-    'rules': {
+    settings: {
+    },
+    rules: {
         //set to warning
         'comma-dangle': [1, 'always-multiline'],
         'space-before-function-paren': [1, { 'anonymous': 'always', 'named': 'never' }],
@@ -44,5 +50,5 @@ module.exports = {
         'no-shadow': [1, {'allow': ['err']}],
         'callback-return': [2, ['callback', 'cb', 'next', 'done']],
         'no-use-before-define': [1, {'functions': false}],
-    }
+    },
 };

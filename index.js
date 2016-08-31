@@ -1,5 +1,5 @@
 module.exports = {
-    extends: 'airbnb-base/legacy',
+    extends: 'airbnb-base',
     env: {
         browser: true,
         mocha: true,
@@ -34,6 +34,9 @@ module.exports = {
         'import/no-unresolved': [1, { 'commonjs': true }],
         'no-underscore-dangle': [1, { 'allowAfterThis': false }],
         'wrap-iife': [1, 'outside'],
+        'prefer-arrow-callback': [1, { allowNamedFunctions: false, allowUnboundThis: true }],
+        'no-var': 1,
+        'prefer-template': 1,
 
         //turned off
         'radix': 0,
@@ -50,5 +53,9 @@ module.exports = {
         'no-shadow': [1, {'allow': ['err']}],
         'callback-return': [2, ['callback', 'cb', 'next', 'done']],
         'no-use-before-define': [1, {'functions': false}],
+
+        // Not yet picked up es6 features
+        'object-shorthand': 0,
+        'prefer-rest-params': 0,
     },
 };

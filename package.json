@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-peerby",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Peerby ESLint configuration",
   "main": "index.js",
   "scripts": {

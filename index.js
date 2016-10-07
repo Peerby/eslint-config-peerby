@@ -39,6 +39,7 @@ module.exports = {
         'prefer-template': 1,
 
         //turned off
+        'no-new': 0,
         'radix': 0,
         'strict': 0,
         'consistent-return': 0,

@@ -29,7 +29,6 @@ module.exports = {
         'no-spaced-func': 1,
         'no-unused-expressions': 1,
         'no-nested-ternary': 1,
-        'newline-per-chained-call': [1, { 'ignoreChainWithDepth': 4 }],
         'global-require': 1,
         'import/no-unresolved': [1, { 'commonjs': true }],
         'no-underscore-dangle': [1, { 'allowAfterThis': false }],
@@ -39,6 +38,7 @@ module.exports = {
         'prefer-template': 1,
 
         //turned off
+        'newline-per-chained-call': 0,
         'no-new': 0,
         'radix': 0,
         'strict': 0,

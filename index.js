@@ -1,11 +1,14 @@
 module.exports = {
-    extends: 'airbnb-base',
+    extends: ['airbnb-base', 'plugin:react/recommended'],
     env: {
         browser: true,
         mocha: true,
         mongo: true,
         node: true,
     },
+    plugins: [
+      'react'
+    ],
     globals: {
     },
     settings: {

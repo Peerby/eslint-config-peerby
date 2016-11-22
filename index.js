@@ -1,3 +1,12 @@
+/*
+ESLint comes with a large number of rules. You can modify which rules your project
+uses either using configuration comments or configuration files.
+To change a rule setting, you must set the rule ID equal to one of these values:
+  'off' - turn the rule off
+  'warn' - turn the rule on as a warning (doesn’t affect exit code)
+  'error' - turn the rule on as an error (exit code is 1 when triggered)
+ */
+
 module.exports = {
     extends: 'airbnb-base',
     env: {
@@ -11,52 +20,54 @@ module.exports = {
     settings: {
     },
     rules: {
-        //set to warning
-        'comma-dangle': [1, 'always-multiline'],
-        'space-before-function-paren': [1, { 'anonymous': 'always', 'named': 'never' }],
-        'quotes': [ 1, 'single', { 'avoidEscape': true }],
-        'object-curly-spacing': [1, 'always'],
-        'spaced-comment': [1, 'always', { 'exceptions': ['-', '+'], 'markers': ['=', '!'] }],
-        'space-infix-ops': 1,
-        'key-spacing': [1, { 'beforeColon': false, 'afterColon': true }],
-        'space-before-blocks': 1,
-        'comma-spacing': [1, { 'before': false, 'after': true }],
-        'no-unused-vars': [1, { 'vars': 'local', 'args': 'after-used' }],
-        'no-else-return': 1,
-        'no-multi-spaces': 1,
-        'new-cap': [1, { 'newIsCap': true }],
-        'one-var': [1, 'never'],
-        'no-spaced-func': 1,
-        'no-unused-expressions': 1,
-        'no-nested-ternary': 1,
-        'global-require': 1,
-        'import/no-unresolved': [1, { 'commonjs': true }],
-        'no-underscore-dangle': [1, { 'allowAfterThis': false }],
-        'wrap-iife': [1, 'outside'],
-        'prefer-arrow-callback': [1, { allowNamedFunctions: false, allowUnboundThis: true }],
-        'no-var': 1,
-        'prefer-template': 1,
+        // errors
+        'callback-return': ['error', ['callback', 'cb', 'next', 'done']],
+        'no-console': 'error',
 
-        //turned off
-        'newline-per-chained-call': 0,
-        'no-new': 0,
-        'radix': 0,
-        'strict': 0,
-        'consistent-return': 0,
-        'padded-blocks': 0,
-        'no-param-reassign': 0,
-        'quote-props': 0,
-        'vars-on-top': 0,
-        'indent': [1, 4, { 'SwitchCase': 1 }],
-        'max-len': 0,
-        'no-console': 2,
-        'func-names': 0,
-        'no-shadow': [1, {'allow': ['err']}],
-        'callback-return': [2, ['callback', 'cb', 'next', 'done']],
-        'no-use-before-define': [1, {'functions': false}],
+        // warning
+        'comma-dangle': ['warn', 'always-multiline'],
+        'comma-spacing': ['warn', { 'before': false, 'after': true }],
+        'global-require': 'warn',
+        'import/no-unresolved': ['warn', { 'commonjs': true }],
+        'indent': ['warn', 4, { 'SwitchCase': 1 }],
+        'key-spacing': ['warn', { 'beforeColon': false, 'afterColon': true }],
+        'new-cap': ['warn', { 'newIsCap': true }],
+        'no-else-return': 'warn',
+        'no-multi-spaces': 'warn',
+        'no-nested-ternary': 'warn',
+        'no-shadow': ['warn', {'allow': ['err']}],
+        'no-spaced-func': 'warn',
+        'no-underscore-dangle': ['warn', { 'allowAfterThis': false }],
+        'no-unused-expressions': 'warn',
+        'no-unused-vars': ['warn', { 'vars': 'local', 'args': 'after-used' }],
+        'no-var': 'warn',
+        'object-curly-spacing': ['warn', 'always'],
+        'one-var': ['warn', 'never'],
+        'prefer-template': 'warn',
+        'prefer-arrow-callback': ['warn', { allowNamedFunctions: false, allowUnboundThis: true }],
+        'quotes': [ 'warn', 'single', { 'avoidEscape': true }],
+        'space-before-function-paren': ['warn', { 'anonymous': 'always', 'named': 'never' }],
+        'spaced-comment': ['warn', 'always', { 'exceptions': ['-', '+'], 'markers': ['=', '!'] }],
+        'space-infix-ops': 'warn',
+        'space-before-blocks': 'warn',
+        'wrap-iife': ['warn', 'outside'],
+
+        // turned off
+        'consistent-return': 'off',
+        'func-names': 'off',
+        'max-len': 'off',
+        'newline-per-chained-call': 'off',
+        'no-new': 'off', // tried to keep it on for classes, but couldn't get it to work (eslint bug?)
+        'no-param-reassign': 'off',
+        'no-use-before-define': 'off',
+        'padded-blocks': 'off',
+        'quote-props': 'off',
+        'radix': 'off',
+        'strict': 'off',
+        'vars-on-top': 'off',
 
         // Not yet picked up es6 features
-        'object-shorthand': 0,
-        'prefer-rest-params': 0,
+        'object-shorthand': 'off',
+        'prefer-rest-params': 'off',
     },
 };

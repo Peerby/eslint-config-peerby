@@ -31,7 +31,6 @@ module.exports = {
         'import/no-unresolved': ['warn', { 'commonjs': true }],
         'indent': ['warn', 4, { 'SwitchCase': 1 }],
         'key-spacing': ['warn', { 'beforeColon': false, 'afterColon': true }],
-        'no-else-return': 'warn',
         'no-multi-spaces': 'warn',
         'no-nested-ternary': 'warn',
         'no-shadow': ['warn', {'allow': ['err']}],
@@ -56,6 +55,7 @@ module.exports = {
         'max-len': 'off',
         'newline-per-chained-call': 'off',
         'new-cap': 'off',
+        'no-else-return': 'off',
         'no-new': 'off', // tried to keep it on for classes, but couldn't get it to work (eslint bug?)
         'no-param-reassign': 'off',
         'no-underscore-dangle': 'off',
